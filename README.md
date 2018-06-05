@@ -32,7 +32,7 @@
 |company      |references |foreign_key: true|
 
 ### Association
-- has_many :companies
+- belongs_to :company
 
 
 ## stories_table
@@ -43,8 +43,9 @@
 |company      |references |foreign_key: true|
 
 ### Association
-- belongs_to :image
-- belongs_to :tag
+- has_many   :images
+- has_many   :tags
+- belongs_to :company
 
 
 ## images_table
@@ -56,7 +57,7 @@
 |story        |references |foreign_key: true|
 
 ### Association
-- has_many :stories
+- belongs_to :story
 - has_one  :content
 
 
@@ -77,7 +78,7 @@
 |story        |references |foreign_key: true|
 
 ### Association
--belongs_to :stories
+-belongs_to :story
 
 
 ## timelines_table
@@ -90,7 +91,7 @@
 |company      |references |foreign_key: true|
 
 ### Association
-- has_many :companies
+- belongs_to :campany
 
 
 ## companies_table
@@ -104,7 +105,7 @@
 |contact      |references |foreign_key: true|
 
 ### Association
-- belongs_to :user
-- belongs_to :contact
-- belongs_to :story
-- belongs_to :timeline
+- has_many :users
+- has_many :contacts
+- has_many :stories
+- has_many :timelines
