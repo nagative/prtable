@@ -29,7 +29,7 @@
 |-------------|-----------|-------|
 |email        |string     |null: false, unique: true|
 |password     |string     |null: false|
-|user_name    |string     |null: false|
+|name         |string     |null: false|
 |company      |references |foreign_key: true|
 
 ### Association
