@@ -1,0 +1,31 @@
+%header.header
+  .header-title
+    .header-title-log
+      = image_tag 'logo.svg', height: '60px', width: '95px'
+    %nav.header__left
+      %ul.header-menu
+        %li.header-menu__list
+          ストーリー
+        %li.header-menu__list
+          企業
+        %li.header-menu__list#main-trigger
+          トピック
+        %li.header-menu__list#contacts
+          資料請求/お問い合わせ
+
+    .header__right
+      .login-button
+        ログイン / 新規登録
+      .search
+        %form.search__form
+          .search__form-wrapper
+            %i.fa.fa-search
+              %input.search__form-input
+          .search__form-results{class: 'hidden', style: 'display: none'}
+            %h3 企業
+            %ul.search__form-results-menu
+              %li.search_form-results-menu__list
+                / 検索結果を表示
+            .search__form-results-submit
+              %button ストーリーを検索
+
