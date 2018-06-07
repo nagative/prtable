@@ -19,10 +19,10 @@
       .search
         %form.search__form
           .search__form-wrapper
-            %i.fa.fa-search
-              %input.search__form-input
+            = fa_icon 'search 2x', class: 'search-icon'
+            %input.search__form-input{class: 'hidden', style: 'display: none'}
           .search__form-results{class: 'hidden', style: 'display: none'}
-            %h3 企業
+            %h3
             %ul.search__form-results-menu
               %li.search_form-results-menu__list
                 / 検索結果を表示

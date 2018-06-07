@@ -59,12 +59,19 @@ body, html{
           border: 1px solid #CCC;
           border-radius: 20px;
           padding: 0 2em;
-
           color: #666;
-
         }
         .search {
           display: inline-block;
+          form .serch__form {
+            .search__form-wrapper {
+              border-radius: 34px;
+              height: 34px;
+              width: 34px;
+              // top:  50%;
+              // transition: width 0.2s ease-out;
+            }
+          }
         }
       }
     }
