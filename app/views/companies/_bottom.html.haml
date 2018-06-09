@@ -4,17 +4,12 @@
     %section.pickup-companies-container
       .title
         %h2
-          %i.material-icons
-          %span ストーリー更新中
+          = fa_icon 'window-restore'
+          %span
+            ストーリー更新中
       #pickup-companies
-        .companies
-          %a
-            %figure
-              .img
-              %figcaption
-                .logos
-                %img アンカー・ジャパン株式会社
-
+        #companies
+          = image_tag 'logo.svg', height: '130px', width: '250px'
     .latest-stories-container
       .container-title
         %h2.title

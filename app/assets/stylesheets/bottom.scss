@@ -8,6 +8,30 @@
   .left-contents {
     float: left;
     width: 868px;
+    section.pickup-companies-container{
+        margin-bottom: 5em;
+      .title {
+        border-bottom: 1px solid rgba(0,0,0,0.15);
+        h2 {
+          padding-bottom: 5px;
+          display: inline-block;
+          font-style: 1.4rem;
+          line-height: 1.2;
+          border-bottom: 1px solid rgba(0,0,0,0.44)
+        }
+      }
+      #pickup-companies {
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        #companies {
+          background-color: white;
+          height: 130px;
+          margin: 1em 1em 0 0;
+        }
+      }
+    }
     .latest-stories-container {
       width: 100%;
       .container-title {
@@ -78,7 +102,6 @@
             display: inline-block;
             vertical-align: middle;
             margin-right: .5em;
-            // margin-top: -.1em;
           }
         }
       }
