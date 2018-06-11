@@ -1,8 +1,20 @@
+%link{rel: "stylesheet", href: "slick.scss"}
+%script{src: "slick/slick.min.js"}
+
 .header-tags
   %ul
     %li%a{href: "/tag/sharing-economy"}#シェアリングエコノミー
 
-#carousel-stories
-  %figure.story
-  %a
-  .img
+#carousel-stories.slick-initialized
+  .slider-arrow
+  .slider
+    %figure
+      .img
+        = image_tag "sea.jpeg"
+    %figure
+      .img
+        = image_tag "harinezumi.jpeg"
+    %figure
+      .img
+        = image_tag "cat.jpeg"
+
