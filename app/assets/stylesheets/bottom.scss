@@ -8,11 +8,10 @@
   .left-contents {
     float: left;
     width: 868px;
-    section.pickup-companies-container{
-        margin-bottom: 5em;
+    .pickup-companies-container{
       .title {
         border-bottom: 1px solid rgba(0,0,0,0.15);
-        h2 {
+        .updating {
           padding-bottom: 5px;
           display: inline-block;
           font-style: 1.4rem;
@@ -25,10 +24,73 @@
         padding-right: 30px;
         display: flex;
         flex-wrap: wrap;
-        #companies {
-          background-color: white;
-          height: 130px;
-          margin: 1em 1em 0 0;
+        height: 250px;
+        .slider-container {
+          position: relative;
+          overflow: hidden;
+          margin: 0;
+          padding: 0;
+          display: block;
+          .slick-box {
+            margin: 0 24px;
+            height: 200px;
+            .slick-list {
+              height: 200px;
+            }
+            .slick-arrow {
+              top: 60%;
+              width: auto;
+              height: auto;
+            }
+            .slick-image {
+              float: left;
+              height: 170px;
+              width
+              .deco-link {
+                text-decoration: none;
+              }
+              figure.fig-content {
+                margin-bottom: 0;
+                .fig-img {
+                  height: 130px;
+                  width: 200px;
+                  box-shadow:0 0 5px rgba(0,0,0,0.2);
+
+                }
+                figcaption.figcap-content{
+                  box-shadow:0 0 5px rgba(0,0,0,0.2);
+                  background-color: #fff;
+                  height: 40px;
+                  width: 200px;
+                  .logo {
+                    background-color: #fff;
+                    position: relative;
+                    top: -.5em;
+                    text-align: center;
+                    z-index: 2;
+                    overflow: hidden;
+                    border-radius: 2px;
+                    box-shadow: 0 0 5px;
+                    float: left;
+                    .figcap-img {
+                      width: 40px;
+                      height: 40px;
+                    }
+                  }
+                  strong.company-name {
+                    background-color: #fff;
+                    width: 40px;
+                    height: 40px;
+                    position: relative;
+                    margin-left: 1em;
+                    font-size: 12px;
+                    text-align: center;
+                    text-decoration: none;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -37,7 +99,7 @@
       .container-title {
         margin-bottom: 2em;
         border-bottom: 1px solid rgba(0,0,0,0.15);
-        h2.title {
+        .new-story {
           padding-bottom: 5px;
           display: inline-block;
           font-style: 1.4rem;
@@ -45,10 +107,10 @@
           border-bottom: 1px solid rgba(0,0,0,0.44)
         }
       }
-      section.stories {
+      .stories {
         display: flex;
         flex-wrap: wrap;
-        article {
+        .stories-link {
           width: 31%;
           margin-bottom: 2%;
           margin-right: 2%;
@@ -67,14 +129,14 @@
               border:1px solid #EBEBEB;
               height: 150px;
             }
-            strong {
+            .subject {
               font-size: 12px;
               font-weight: bold;
               line-height: 1.5;
               display: block;
               margin-top: 1em;
             }
-            p.name {
+            .name {
               font-size: 11px;
               margin-top: 1em;
               line-height: 1;
