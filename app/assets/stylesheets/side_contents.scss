@@ -1,0 +1,126 @@
+.side-contents {
+    width: 310px;
+    height: 1400px;
+    background-color: Transparent;
+    float: right;
+    flex-direction: column;
+    color: #333;
+    margin-right: 100px;
+    padding-bottom: 250px;
+  .side-stories {
+    width: 300px;
+    height: 31%;
+    float: right;
+    background-color: white;
+    margin-top: 40px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    font-size: 10px;
+    font-weight: bold;
+    font-family: inherit;
+    display: block;
+    color: #999;
+      .side-story-title {
+        font-size: 15px;
+        padding-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+      .article_image {
+        width: 290px;
+      }
+      .hoverground{
+        float: left;
+        .image {
+          height: 10px;
+          width: 5px;
+          padding-top: 20px
+        }
+      }
+      .story-info {
+        padding-top: 10px;
+        float: right;
+        width: 65%;
+        .strong {
+          word-break: break-word;
+          text-align: left;
+        }
+        .company-name {
+          padding-top: 10px;
+        }
+      }
+  }
+  .side-tags {
+    float: right;
+    width: 300px;
+    height: 30%;
+    font-size: 10px;
+    background-color: white;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+      .side-story-title {
+        font-family: inherit;
+        font-size: 15px;
+        padding-bottom: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+
+  }
+    .side-wrap {
+    padding: 0;
+    width: 300px;
+    list-style: none;
+    }
+      .side-tags_list {
+        margin: 3px;
+        padding: 0;
+        float: left;
+        width: 140px;
+        font-size: 12px;
+      }
+      .more {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 12px;
+      }
+  .side-companylist {
+    float: right;
+    width: 300px;
+    font-size: 10px;
+    background-color: white;
+    margin-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+      a {
+        text-decoration: none;
+        color: #666;
+      }
+      .figure {
+        float: left;
+        width: 250px;
+        .figure_image {
+          width: 5px;
+          height: 5px;
+        }
+          .figcaption {
+            width: 200px;
+            float: right;
+            font-size: 10px;
+            padding-top: 10px;
+            text-align: left;
+          }
+      }
+  }
+}
