@@ -35,6 +35,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'capistrano', '3.10.2'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
@@ -45,9 +50,16 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'unicorn'
+end
+
 gem 'pry-rails'
 gem 'compass-rails', '~> 2.0'
 gem 'sprockets', '2.11.0'
 gem 'haml-rails'
 gem 'erb2haml'
 gem 'font-awesome-rails'
+gem 'rufo'
+gem 'carrierwave'
+# gem 'fog-aws'
