@@ -59,6 +59,9 @@ body, html{
           border-radius: 20px;
           padding: 0 2em;
           color: #666;
+          .login-icon {
+          text-decoration: none;
+          }
         }
         .search {
           display: inline-block;

@@ -1,7 +1,9 @@
 %header.header
   .header-title
     .header-title-log
-      = image_tag 'logo.svg', height: '60px', width: '95px'
+      = link_to root_path, method: :get do
+        = image_tag 'logo.svg', height: '60px', width: '95px'
+
     %nav.header__left
       %ul.header-menu
         %li.header-menu__list
@@ -15,7 +17,7 @@
 
     .header__right
       .login-button
-        ログイン / 新規登録
+        =link_to 'ログイン / 新規登録', new_user_session_path, class: 'login-icon'
       .search
         %form.search__form
           .search__form-wrapper
