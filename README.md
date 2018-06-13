@@ -18,10 +18,9 @@
 |campany_url  |text       |
 |task         |boolean    |null: false|
 |remarks      |text       |
-|company      |references |foreign_key: true|
 
 ### Association
-- has_one :company
+- has_one : user
 
 
 ## users_table
@@ -29,11 +28,18 @@
 |-------------|-----------|-------|
 |email        |string     |null: false, unique: true|
 |password     |string     |null: false|
-|name         |string     |null: false|
-|company      |references |foreign_key: true|
+|user_name    |string     |null: false|
+|overview     |text       |null: false|
+|representative|string    |null: false|
+|foundation   |date       |null: false|
+|address      |text       |null: false|
+|vision       |text       |null: false|
+|contact      |references |foreign_key: true|
 
 ### Association
-- belongs_to :company
+- belongs_to :contact
+- has_many :stories
+- has_many :timelines
 
 
 ## stories_table
@@ -41,12 +47,12 @@
 |-------------|-----------|-------|
 |title        |string     |null: false|
 |sub-title    |string     |null: false|
-|company      |references |foreign_key: true|
+|user         |references |foreign_key: true|
 
 ### Association
 - has_many   :images
 - has_many   :tags
-- belongs_to :company
+- belongs_to :user
 
 
 ## images_table
@@ -89,24 +95,7 @@
 |title        |string     |
 |date         |date       |
 |comment      |text       |
-|company      |references |foreign_key: true|
+|user         |references |foreign_key: true|
 
 ### Association
-- belongs_to :campany
-
-
-## companies_table
-|Column       |Type       |Options|
-|-------------|-----------|-------|
-|overview     |text       |null: false|
-|representative|string    |null: false|
-|foundation   |date       |null: false|
-|address      |text       |null: false|
-|vision       |text       |null: false|
-|contact      |references |foreign_key: true|
-
-### Association
-- has_many :users
-- has_many :contacts
-- has_many :stories
-- has_many :timelines
+- belongs_to :user
