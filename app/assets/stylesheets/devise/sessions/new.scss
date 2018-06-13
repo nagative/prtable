@@ -1,0 +1,76 @@
+.wrap {
+  background-color: #FFF;
+  height: 100%;
+  .container-single-window {
+    width: 682px;
+    margin: 1.5em auto;
+    .single-form {
+      margin: 4em 0;
+      .login-title {
+        font-size:  1.4em;
+        letter-spacing: 1px;
+        line-height: 50px;
+        text-align: center;
+        margin-bottom: 1em;
+        font-weight: bold;
+      }
+      p.notice {
+        margin-bottom: 5em;
+        font-size: 0.8em;
+        text-align: center;
+      }
+      .new_user {
+        .field {
+          margin-bottom: 1em;
+          .field-input {
+            input#user_email {
+              font-size: 0.9em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            input#user_password {
+              font-size: 0.9em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+          }
+        }
+        .actions {
+          .actions-icon {
+            font-size: 0.9em;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            border: 1px solid #CCC;
+            border-radius: 5px;
+            background-color: #29D9C2;
+            padding: 0 1em;
+            color: #FFF;
+            box-shadow: 0 3px 0 0 #40A29F;
+            font-weight: bold;
+          }
+        }
+        .small-box {
+          margin-top: 4em;
+          text-align: center;
+          ul.lists {
+            list-style: none;
+            li.list {
+              font-size: 0.8em;
+              margin-top: 0.1em;
+              .list-icon {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

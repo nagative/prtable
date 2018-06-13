@@ -1,0 +1,16 @@
+.wrap
+  = render 'companies/header'
+  .container-single-window
+    %section.single-form
+      %h1.login-title
+        パスワードをお忘れの方
+      %p.notice
+        登録されたメールアドレス宛にパスワード再設定のリンクを送付します
+      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+        = devise_error_messages!
+        .field
+          .field-input
+            = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス'
+        .actions
+          = f.submit "送信", class: 'actions-icon'
+  = render 'companies/footer'
