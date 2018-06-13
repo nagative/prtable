@@ -9,7 +9,7 @@
 ## contacts_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|enquiry      |boolean    |null: false|
+|enquiry      |integer    |null: false|
 |company_name |string     |null: false, index: true|
 |department   |string     |null: false|
 |user_name    |string     |null: false|
@@ -20,7 +20,7 @@
 |remarks      |text       |
 
 ### Association
-- has_one : user
+- has_many : users
 
 
 ## users_table
@@ -58,9 +58,7 @@
 ## images_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|headline     |string     |null: false|
 |image        |string     |null: false|
-|sub_title    |string     |null: false|
 |story        |references |foreign_key: true|
 
 ### Association
@@ -68,9 +66,11 @@
 - has_one  :content
 
 
-## contents_table
+## article_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
+|headline     |string     |null: false|
+|sub_title    |string     |null: false|
 |body         |text       |null: false|
 |image        |references |foreign_key: true|
 
@@ -81,8 +81,9 @@
 ## tags_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|topic        |string     |
+|name         |string     |
 |story        |references |foreign_key: true|
+|taggings_count|integer   |null: false|
 
 ### Association
 -belongs_to :story
