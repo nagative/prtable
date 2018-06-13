@@ -135,14 +135,17 @@ $slick-opacity-not-active: 0.25 !default;
 }
 
 .slick-dots {
-    position: absolute;
-    bottom: -25px;
+    position: relative;
+    top: -50px;
     list-style: none;
     display: block;
     text-align: center;
     padding: 0;
     margin: 0;
     width: 100%;
+    z-index: 2;
+    justify-content: center;
+    //align-items: center;
     li {
         position: relative;
         display: inline-block;
@@ -177,18 +180,19 @@ $slick-opacity-not-active: 0.25 !default;
                 width: 20px;
                 height: 20px;
                 font-family: $slick-font-family;
-                font-size: $slick-dot-size;
+                font-size: 50px;
                 line-height: 20px;
                 text-align: center;
-                color: $slick-dot-color;
-                opacity: $slick-opacity-not-active;
+                color: #FFF;
+                outline: none;
+                //opacity: $slick-opacity-not-active;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
             }
         }
         &.slick-active button:before {
-            color: $slick-dot-color-active;
-            opacity: $slick-opacity-default;
+            color: $slick-dot-color;
+            //opacity: $slick-opacity-default;
         }
     }
 }

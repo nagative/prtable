@@ -6,15 +6,19 @@
     %li%a{href: "/tag/sharing-economy"}#シェアリングエコノミー
 
 #carousel-stories.slick-initialized
+  %ul.slick-dots{role: "tablist", style: "display:flex;"}
+    %li#slick-slide.slick-active{"aria-controls": "navigation", "aria-hidden": "true", "aria-selected": "false", role: "presentation"}
+    %li#slick-slide.slick-active{"aria-controls": "navigation", "aria-hidden": "true", "aria-selected": "false", role: "presentation"}
+    %li#slick-slide.slick-active{"aria-controls": "navigation", "aria-hidden": "true", "aria-selected": "false", role: "presentation"}
   .slider-arrow
   .slider
     %figure
       .img
-        = image_tag "technology.jpg"
+        = image_tag "sea.jpeg"
     %figure
       .img
-        = image_tag "society.jpg"
+        = image_tag "harinezumi.jpeg"
     %figure
       .img
-        = image_tag "city.jpg"
+        = image_tag "cat.jpeg"
 
