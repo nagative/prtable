@@ -6,7 +6,6 @@ $(document).ready(function(){
     centerMode: true,
     variableWidth: true,
     appendArrows: '#slick-slide',
-    //appendDots: '#slick-slide',
     dots: true,
     prevArrow: '<div class="slider-arrow slider-prev fa fa-angle-left"></div>',
     nextArrow: '<div class="slider-arrow slider-next fa fa-angle-right"></div>'
