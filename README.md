@@ -63,7 +63,7 @@
 
 ### Association
 - belongs_to :story
-- has_one  :content
+- has_one  :article
 
 
 ## article_table
