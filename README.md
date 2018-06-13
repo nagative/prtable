@@ -9,7 +9,7 @@
 ## contacts_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|enquiry      |boolean    |null: false|
+|enquiry      |integer    |null: false|
 |company_name |string     |null: false, index: true|
 |department   |string     |null: false|
 |user_name    |string     |null: false|
@@ -18,10 +18,9 @@
 |campany_url  |text       |
 |task         |boolean    |null: false|
 |remarks      |text       |
-|company      |references |foreign_key: true|
 
 ### Association
-- has_one :company
+- has_many : users
 
 
 ## users_table
@@ -29,11 +28,18 @@
 |-------------|-----------|-------|
 |email        |string     |null: false, unique: true|
 |password     |string     |null: false|
-|name         |string     |null: false|
-|company      |references |foreign_key: true|
+|user_name    |string     |null: false|
+|overview     |text       |null: false|
+|representative|string    |null: false|
+|foundation   |date       |null: false|
+|address      |text       |null: false|
+|vision       |text       |null: false|
+|contact      |references |foreign_key: true|
 
 ### Association
-- belongs_to :company
+- belongs_to :contact
+- has_many :stories
+- has_many :timelines
 
 
 ## stories_table
@@ -41,30 +47,30 @@
 |-------------|-----------|-------|
 |title        |string     |null: false|
 |sub-title    |string     |null: false|
-|company      |references |foreign_key: true|
+|user         |references |foreign_key: true|
 
 ### Association
 - has_many   :images
 - has_many   :tags
-- belongs_to :company
+- belongs_to :user
 
 
 ## images_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|headline     |string     |null: false|
 |image        |string     |null: false|
-|sub_title    |string     |null: false|
 |story        |references |foreign_key: true|
 
 ### Association
 - belongs_to :story
-- has_one  :content
+- has_one  :article
 
 
-## contents_table
+## article_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
+|headline     |string     |null: false|
+|sub_title    |string     |null: false|
 |body         |text       |null: false|
 |image        |references |foreign_key: true|
 
@@ -75,8 +81,9 @@
 ## tags_table
 |Column       |Type       |Options|
 |-------------|-----------|-------|
-|topic        |string     |
+|name         |string     |
 |story        |references |foreign_key: true|
+|taggings_count|integer   |null: false|
 
 ### Association
 -belongs_to :story
@@ -89,24 +96,7 @@
 |title        |string     |
 |date         |date       |
 |comment      |text       |
-|company      |references |foreign_key: true|
+|user         |references |foreign_key: true|
 
 ### Association
-- belongs_to :campany
-
-
-## companies_table
-|Column       |Type       |Options|
-|-------------|-----------|-------|
-|overview     |text       |null: false|
-|representative|string    |null: false|
-|foundation   |date       |null: false|
-|address      |text       |null: false|
-|vision       |text       |null: false|
-|contact      |references |foreign_key: true|
-
-### Association
-- has_many :users
-- has_many :contacts
-- has_many :stories
-- has_many :timelines
+- belongs_to :user
