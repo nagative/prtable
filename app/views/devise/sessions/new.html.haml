@@ -1,0 +1,28 @@
+.wrap
+  = render 'companies/header'
+  .container-single-window
+    %section.single-form
+      %h1.login-title
+        ログイン
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          .field-input
+            = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス'
+        .field
+          .field-input
+            = f.password_field :password, autocomplete: 'off', placeholder: 'パスワード'
+        .actions
+          = f.submit 'ログイン', class: 'actions-icon'
+        .small-box
+          %ul.lists
+            %li.list
+              = link_to new_user_registration_path, method: :get, target:'_blank', class: 'list-icon' do
+                %span.message
+                  新規アカウント登録(問い合わせ)
+                = fa_icon 'angle-double-right', class: 'icon'
+            %li.list
+              = link_to new_user_password_path, method: :get, class: 'list-icon' do
+                %span.message
+                  パスワードをお忘れの方
+                = fa_icon 'angle-double-right', class: 'icon'
+  = render 'companies/footer'
