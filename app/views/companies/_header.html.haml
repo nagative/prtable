@@ -16,18 +16,22 @@
           資料請求/お問い合わせ
 
     .header__right
-      .login-button
-        =link_to 'ログイン / 新規登録', new_user_session_path, class: 'login-icon'
-      .search
-        %form.search__form
-          .search__form-wrapper
-            = fa_icon 'search 2x', class: 'search-icon'
-            %input.search__form-input{class: 'hidden', style: 'display: none'}
-          .search__form-results{class: 'hidden', style: 'display: none'}
-            %h3
-            %ul.search__form-results-menu
-              %li.search_form-results-menu__list
-                / 検索結果を表示
-            .search__form-results-submit
-              %button ストーリーを検索
+      - if user_signed_in?
+        .logout-button
+          = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'logout-icon'
+      - else
+        .login-button
+          = link_to 'ログイン / 新規登録', new_user_session_path, class: 'login-icon'
+        .search
+          %form.search__form
+            .search__form-wrapper
+              = fa_icon 'search 2x', class: 'search-icon'
+              %input.search__form-input{class: 'hidden', style: 'display: none'}
+            .search__form-results{class: 'hidden', style: 'display: none'}
+              %h3
+              %ul.search__form-results-menu
+                %li.search_form-results-menu__list
+                  / 検索結果を表示
+              .search__form-results-submit
+                %button ストーリーを検索
 
