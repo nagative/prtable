@@ -1,21 +1,52 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = devise_error_messages!
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "off"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "off"
-  .actions
-    = f.submit "Sign up"
-= render "devise/shared/links"
+.wrap
+  = render 'companies/header'
+  .container-single-window
+    %section.single-form
+      %h1.login-title
+        新規アカウント登録
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = devise_error_messages!
+        .field
+          .field-input
+            = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス＊必須'
+        .field
+          - if @minimum_password_length
+            .field-input
+              #{@minimum_password_length}文字以上の英数字を入力してください。
+          .field-input
+            = f.password_field :password, autocomplete: 'off', placeholder: 'パスワード＊必須'
+        .field
+          .field-input
+            = f.password_field :password, autocomplete: 'off', placeholder: 'パスワード(確認用)'
+        .field
+          = f.label :name, '会社名を入力してください (例) 株式会社○○、△△株式会社'
+          .field-input
+            = f.text_field :name, placeholder: '会社名＊必須'
+        .field
+          = f.label :overview, '会社・団体についての紹介文を入力してください ＊200文字以内＊'
+          .field-input
+            = f.text_area :overview, autocomplete: 'off', maxlength:'200', placeholder: '企業・団体向けストーリーテリング®︎プラットフォームの企画・開発・運営'
+        .field
+          = f.label :representative, '会社・団体の代表者名をフルネームで入力してください'
+          .field-input
+            = f.text_field :representative, autocomplete: 'off', placeholder: '(例)山田太郎＊必須'
+        .field
+          = f.label :foundation, '創業した月日を選択してください'
+          .field-input
+            = f.date_select :foundation, use_month_numbers: true, start_year: 1900, end_year: 2100
+        .field
+          = f.label :address, '会社・団体の住所を入力してください'
+          %br
+          %span.field
+            (例) 東京都○○区△-△-△ □□□□ビル 1F
+          .field-input
+            = f.text_field :address, placeholder: '住所を入力してください＊必須'
+        .field
+          = f.label :vision, '会社・団体のビジョンもしくはミッションを入力してください＊100文字以内＊'
+          .field-input
+            = f.text_area :overview, autocomplete: 'off', maxlength:'100', placeholder: '《ビジョンまたはミッション》'
+
+        .actions
+          = f.submit '新規アカウント登録', class: 'actions-icon'
+
+  = render "companies/footer"

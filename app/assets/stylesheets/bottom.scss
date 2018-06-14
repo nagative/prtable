@@ -31,7 +31,7 @@
           margin: 0;
           padding: 0;
           display: block;
-          .slick-box {
+          .slick {
             margin: 0 24px;
             height: 200px;
             .slick-list {
@@ -45,7 +45,7 @@
             .slick-image {
               float: left;
               height: 170px;
-              width
+              font-family: fontAwesome;
               .deco-link {
                 text-decoration: none;
               }
