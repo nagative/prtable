@@ -52,6 +52,14 @@ body, html{
         float: right;
         height: 60px;
         padding: 15px;
+        .new-story-button {
+          line-height: 30px;
+          display: inline-block;
+          border: 1px solid #CCC;
+          border-radius: 20px;
+          padding: 0 1em;
+          color: #666;
+        }
         .login-button {
           line-height: 30px;
           display: inline-block;

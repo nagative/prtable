@@ -16,6 +16,8 @@
           資料請求/お問い合わせ
 
     .header__right
+      .new-story-button
+        %a{href: "/stories/new"}ストーリー作成
       .login-button
         =link_to 'ログイン / 新規登録', new_user_session_path, class: 'login-icon'
       .search
