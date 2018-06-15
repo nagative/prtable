@@ -16,7 +16,7 @@ body, html{
     height: 60px;
     width: 100vw;
     background-color: #FFF;
-    font-size: 10px;
+    font-size: 11px;
     .header-title {
       margin: auto;
       height: 60px;
@@ -41,6 +41,9 @@ body, html{
             display: inline-block;
             line-height: 60px;
             margin-left: 4em;
+            .header_link {
+              text-decoration: none;
+            }
           }
 
         }
