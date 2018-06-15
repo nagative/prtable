@@ -7,13 +7,13 @@
     %nav.header__left
       %ul.header-menu
         %li.header-menu__list
-          ストーリー
+          = link_to 'ストーリー', root_path, class: 'header_link'
         %li.header-menu__list
-          企業
+          = link_to '企業', root_path, class: 'header_link'
         %li.header-menu__list#main-trigger
-          トピック
+          = link_to 'トピック', root_path, class: 'header_link'
         %li.header-menu__list#contacts
-          資料請求/お問い合わせ
+          = link_to '資料請求/お問い合わせ', root_path, class: 'header_link'
 
     .header__right
       - if user_signed_in?
