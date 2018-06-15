@@ -29,7 +29,6 @@ body, html{
       }
       .header__left {
         height: 60px;
-        // width: 500px;
         padding-left: 10em;
         float: left;
         vertical-align: middle;
@@ -37,7 +36,6 @@ body, html{
           height: 60px;
           list-style-type: none;
           text-align: center;
-          // float: left;
           .header-menu__list {
             height: 60px;
             display: inline-block;
@@ -52,13 +50,16 @@ body, html{
         float: right;
         height: 60px;
         padding: 15px;
-        .new-story-button {
+        .logout-button {
           line-height: 30px;
           display: inline-block;
           border: 1px solid #CCC;
           border-radius: 20px;
-          padding: 0 1em;
+          padding: 0 2em;
           color: #666;
+          .logout-icon {
+            text-decoration: none;
+          }
         }
         .login-button {
           line-height: 30px;
@@ -78,8 +79,6 @@ body, html{
               border-radius: 34px;
               height: 34px;
               width: 34px;
-              // top:  50%;
-              // transition: width 0.2s ease-out;
             }
           }
         }

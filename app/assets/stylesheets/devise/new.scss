@@ -1,6 +1,5 @@
 .wrap {
   background-color: #FFF;
-  height: 100%;
   .container-single-window {
     width: 682px;
     margin: 1.5em auto;
@@ -23,7 +22,7 @@
         .field {
           margin-bottom: 1em;
           .field-input {
-            input#user_email {
+            #user_email {
               font-size: 0.9em;
               width: 100%;
               height: 50px;
@@ -31,8 +30,48 @@
               border: 1px solid #CCC;
               padding: 0 1em;
             }
-            input#user_password {
+            #user_password {
               font-size: 0.9em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            #user_name {
+              font-size: 0.9em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            #user_overview {
+              font-size: 0.9em;
+              width: 100%;
+              height: 200px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            #user_representative{
+              font-size: 0.9em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            #user_foundation {
+              font-size: 0.8em;
+              width: 100%;
+              height: 50px;
+              line-height: 50px;
+              border: 1px solid #CCC;
+              padding: 0 1em;
+            }
+            #user_address {
+              font-size: 0.8em;
               width: 100%;
               height: 50px;
               line-height: 50px;
