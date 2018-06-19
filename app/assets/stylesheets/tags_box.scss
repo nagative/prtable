@@ -1,0 +1,17 @@
+.box {
+	display: none;
+	margin: 0 auto 0 auto;
+
+	background-color: #FFF;
+	border-bottom: 1px solid #bbb;
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			color: #666;
+			padding-right: 10px;
+			display: inline;
+		}
+	}
+}
