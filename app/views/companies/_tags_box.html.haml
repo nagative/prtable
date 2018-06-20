@@ -1,8 +1,6 @@
 .box#tags_box
   %ul
     %li
-      タグ
-    %li
-      tags
-    %li
-      ビジネス
+      - @tags.each do |tag|
+        .tagging 
+          = link_to "#"+tag[:name], "/tags/show"
