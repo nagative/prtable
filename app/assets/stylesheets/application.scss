@@ -1,11 +1,13 @@
 @import 'reset';
 @import 'variable';
-@import 'header';
-@import 'top_contents';
-@import 'bottom';
-@import 'footer';
+@import 'index';
 @import 'slick';
 @import 'slick-theme';
 @import 'font-awesome';
+@import 'header';
+@import 'top_contents';
+@import 'left_contents';
 @import 'side_contents';
+@import 'footer';
 @import './devise/new';
+@import 'story_form';
