@@ -3,4 +3,4 @@
     %li
       - @tags.each do |tag|
         .tagging 
-          = link_to "#"+tag[:name], "/tags/show"
+          = link_to "#"+tag[:name], "tags/:id"

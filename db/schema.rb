@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180620024635) do
+ActiveRecord::Schema.define(version: 20180621081431) do
 
   create_table "example", force: :cascade do |t|
     t.string "name", limit: 255
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20180620024635) do
   add_index "example", ["name"], name: "index_tags_on_name", using: :btree
 
   create_table "stories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "tittle",     limit: 255
   end
 
   create_table "taggings", force: :cascade do |t|

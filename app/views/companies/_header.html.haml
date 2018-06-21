@@ -1,7 +1,8 @@
 %header.header
   .header-title
     .header-title-log
-      = image_tag 'logo.svg', height: '60px', width: '95px'
+      = link_to root_path do
+        = image_tag 'logo.svg', height: '60px', width: '95px'
     %nav.header__left
       %ul.header-menu
         %li.header-menu__list
@@ -28,5 +29,3 @@
                 / 検索結果を表示
             .search__form-results-submit
               %button ストーリーを検索
-
-= render "tags_box"

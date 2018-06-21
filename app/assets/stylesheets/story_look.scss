@@ -1,0 +1,34 @@
+.story_look {
+  .breadcrumbs {
+  	font-size: 13px;
+  	margin-left: 120px;
+  	margin-top: 10px;
+  	a {
+  		text-decoration: none;
+  		color: #666;
+  	}
+  }
+  .tags_title {
+  	font-size: 30px;
+  	text-align: center;
+  	margin-top: 10px;
+  }
+  .page_count {
+  	font-size: 13px;
+  	color: #666;
+  	margin-left: 120px;
+  	margin-top: 10px;
+  }
+  .tags-story {
+  	text-align: center;
+  	margin-top: 3em;
+  }
+  .page_footer {
+  	text-align: center;
+  	margin-top: 3em;
+  	a {
+  	text-decoration: none;
+  	color: #666;
+    }
+  }
+}

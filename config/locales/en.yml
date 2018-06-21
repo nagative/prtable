@@ -21,3 +21,20 @@
 
 en:
   hello: "Hello world"
+en:
+  views:
+    pagination:
+      first: "&laquo; 最初"
+      last: "最後 &raquo;"
+      previous: "&lsaquo; "
+      next: " &rsaquo;"
+      truncate: "..."
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "該当データがありません。"
+          one: "1件中 1-1 件を表示"
+          other: "%{count}件中 / 1-%{count}件を表示しています。"
+      more_pages:
+        display_entries: "<b>%{total}件中</b><b>%{first}&nbsp;-&nbsp;%{last}件を表示しています。</b>"
