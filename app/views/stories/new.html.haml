@@ -1,8 +1,8 @@
-.story-contents-form
+.story-form
   = form_for @story do |f|
     = f.hidden_field :user_id, value: current_user.id
-    %header.story-top
-      .story-top-contents
+    %header
+      .story-contents-top
         .logo-box
           .logo-mark
             = f.file_field :logo, required: true, autofocus: true, class: "hidden", placeholder: "会社ロゴマーク"
@@ -11,7 +11,7 @@
         .trriger-reason
           = f.text_area :read, require: true, placeholder: "ストーリー前置き", class: "story__preface"
 
-    .story-contents
+    .story-contents-main
       .story-subtitle
         = f.text_field :sub_title, require: true, placeholder: "サブタイトル"
       .story-image-picture

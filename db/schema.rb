@@ -11,24 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20180615025215) do
-
-  create_table "stories", force: :cascade do |t|
-    t.string   "title",       limit: 255,   null: false
-    t.string   "sub_title",   limit: 255,   null: false
-    t.integer  "user_id",     limit: 4
-    t.string   "logo",        limit: 255,   null: false
-    t.text     "read",        limit: 65535, null: false
-    t.string   "picture",     limit: 255,   null: false
-    t.string   "description", limit: 255,   null: false
-    t.text     "content",     limit: 65535, null: false
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-  end
-
-  add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
-=======
 ActiveRecord::Schema.define(version: 20180621064035) do
 
   create_table "contacts", force: :cascade do |t|
@@ -46,7 +28,21 @@ ActiveRecord::Schema.define(version: 20180621064035) do
   end
 
   add_index "contacts", ["company_name"], name: "index_contacts_on_company_name", using: :btree
->>>>>>> master
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "title",       limit: 255,   null: false
+    t.string   "sub_title",   limit: 255,   null: false
+    t.integer  "user_id",     limit: 4
+    t.string   "logo",        limit: 255,   null: false
+    t.text     "read",        limit: 65535, null: false
+    t.string   "picture",     limit: 255,   null: false
+    t.string   "description", limit: 255,   null: false
+    t.text     "content",     limit: 65535, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
