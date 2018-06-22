@@ -1,0 +1,16 @@
+= render 'companies/header'
+= render 'companies/tags_box'
+#breadcrumbs-wrap.story_look
+  %section.breadcrumbs
+    %a{:href => "/"} HOME
+    %a{:href => "/tag"} > ストーリーのトピック一覧
+    %span > = @name.name
+  .tags_title
+    = @name
+  .page_count
+    = page_entries_info @tags
+  .tags-story
+    = @stories
+  .page_footer
+    = paginate(@stories)
+= render 'companies/footer'
