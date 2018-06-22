@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'companies#index'
-  resources :companies, only: [:index]
-  resources :stories, only: [:index, :new, :create]
+  root 'users#index'
+  resources :users, only: [:index]
+  resources :stories, only: [:index, :new, :create] do
+  resources :tags, only: [:index, :show]
+  end
 end
