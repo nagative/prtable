@@ -47,6 +47,20 @@
     .header__right {
       float: right;
       padding-top: 15px;
+      .new-story-button {
+        padding-right: 15px;
+        text-align: left;
+        float: left;
+        .new-story-icon {
+          line-height: 30px;
+          border: 1px solid #CCC;
+          border-radius: 20px;
+          padding: 0 2em;
+          color: #CCC;
+          float: right;
+          text-decoration: none;
+        }
+      }
       .logout-button {
         padding-right: 15px;
         text-align: left;
