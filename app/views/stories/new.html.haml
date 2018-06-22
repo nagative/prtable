@@ -1,52 +1,52 @@
-.story-contents-form
-  %header.story-top
-    .story-top-contents
-      .logo-mark
-        = file_field :image, class: "hidden", placeholder: "会社ロゴマーク"
-      .story-title
-        = text_field placeholder: "タイトル"
-      .trriger-reason
-        = text_field placeholder: "ストーリー前置き"
+.story-form
+  = form_for @story do |f|
+    = f.hidden_field :user_id, value: current_user.id
+    %header
+      .story-contents-top
+        .logo-box
+          .logo-mark
+            = f.file_field :logo, required: true, autofocus: true, class: "hidden", placeholder: "会社ロゴマーク"
+        .story-title
+          = f.text_field :title, require: true, placeholder: "タイトル", class: "contributiton__title"
+        .trriger-reason
+          = f.text_area :read, require: true, placeholder: "ストーリー前置き", class: "story__preface"
 
-  .story-contents
-    .story-subtitle
-      = text_field placeholder: "サブタイトル"
-    .story-image-picture
-      = file_field :image, class: "hidden", placeholder: "イメージ画像"
-    .story-image-description
-      = text_field placeholder: "画像の説明"
-    .story-content
-      = text_field placeholder: "ストーリーを入力してください"
+    .story-contents-main
+      .story-subtitle
+        = f.text_field :sub_title, require: true, placeholder: "サブタイトル"
+      .story-image-picture
+        = f.file_field :picture, require: true, class: "hidden", placeholder: "イメージ画像"
+      .story-image-description
+        = f.text_field :description, require: true, placeholder: "画像の説明"
+      .story-content
+        = f.text_area :content, require: true, placeholder: "ストーリーを入力してください"
 
-    .story-subtitle
-      = text_field placeholder: "サブタイトル"
-    .story-image-picture
-      = file_field :image, class: "hidden", placeholder: "イメージ画像"
-    .story-image-description
-      = text_field placeholder: "画像の説明"
-    .story-content
-      = text_field placeholder: "ストーリーを入力してください"
+      .story-subtitle
+        = f.text_field :sub_title, require: true, placeholder: "サブタイトル"
+      .story-image-picture
+        = f.file_field :picture, require: true, class: "hidden", placeholder: "イメージ画像"
+      .story-image-description
+        = f.text_field :description,require: true, placeholder: "画像の説明"
+      .story-content
+        = f.text_area :content, require: true, placeholder: "ストーリーを入力してください"
 
-    .story-subtitle
-      = text_field placeholder: "サブタイトル"
-    .story-image-picture
-      = file_field :image, class: "hidden", placeholder: "イメージ画像"
-    .story-image-description
-      = text_field placeholder: "画像の説明"
-    .story-content
-      = text_field placeholder: "ストーリーを入力してください"
+      .story-subtitle
+        = f.text_field :sub_title, require: true, placeholder: "サブタイトル"
+      .story-image-picture
+        = f.file_field :picture, require: true, class: "hidden", placeholder: "イメージ画像"
+      .story-image-description
+        = f.text_field :description, require: true, placeholder: "画像の説明"
+      .story-content
+        = f.text_area :content, require: true, placeholder: "ストーリーを入力してください"
 
-    .story-subtitle
-      = text_field placeholder: "サブタイトル"
-    .story-image-picture
-      = file_field :image, class: "hidden", placeholder: "イメージ画像"
-    .story-image-description
-      = text_field placeholder: "画像の説明"
-    .story-content
-      = text_field placeholder: "ストーリーを入力してください"
+      .story-subtitle
+        = f.text_field :sub_title, require: true, placeholder: "サブタイトル"
+      .story-image-picture
+        = f.file_field :picture, require: true, class: "hidden", placeholder: "イメージ画像"
+      .story-image-description
+        = f.text_field :description, require: true, placeholder: "画像の説明"
+      .story-content
+        = f.text_area :content, require: true, placeholder: "ストーリーを入力してください"
 
-  .story-text.story-btn
-    = submit "ストーリー作成", id: "button", class: "btn btn-lg btn-primary btn-block"
-
-
-
+      .story-text.story-btn
+        = f.submit "ストーリー作成", id: "button", class: "story__submit"
