@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20180615025215) do
 
   create_table "stories", force: :cascade do |t|
@@ -27,6 +28,25 @@ ActiveRecord::Schema.define(version: 20180615025215) do
   end
 
   add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
+=======
+ActiveRecord::Schema.define(version: 20180621064035) do
+
+  create_table "contacts", force: :cascade do |t|
+    t.integer  "enquiry",      limit: 4,     null: false
+    t.string   "company_name", limit: 255,   null: false
+    t.string   "department",   limit: 255,   null: false
+    t.string   "user_name",    limit: 255,   null: false
+    t.string   "email",        limit: 255,   null: false
+    t.integer  "tel_number",   limit: 4,     null: false
+    t.text     "company_url",  limit: 65535
+    t.boolean  "task",                       null: false
+    t.text     "remarks",      limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "contacts", ["company_name"], name: "index_contacts_on_company_name", using: :btree
+>>>>>>> master
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
