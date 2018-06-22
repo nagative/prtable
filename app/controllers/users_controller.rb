@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     #   format.html
     #   format.json
     # end
+  	@tags = Tag.all
   end
 
 

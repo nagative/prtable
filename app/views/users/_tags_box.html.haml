@@ -1,3 +1,6 @@
 .box#tags_box
   %ul
     %li
+      - @tags.each do |tag|
+        .tagging 
+          = link_to "#"+tag[:name], "tags/:id"
