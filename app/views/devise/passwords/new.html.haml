@@ -1,5 +1,5 @@
 .wrap
-  = render 'users/header'
+  = render 'companies/header'
   .container-single-window
     %section.single-form
       %h1.login-title
@@ -13,4 +13,4 @@
             = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス'
         .actions
           = f.submit "送信", class: 'actions-icon'
-  = render 'users/footer'
+  = render 'companies/footer'
