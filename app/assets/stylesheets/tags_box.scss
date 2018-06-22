@@ -1,6 +1,7 @@
 .box {
-	display: none;
-	
+	// display: none;
+	width: 100%;
+	position: absolute;
 	background-color: #FFF;
 	border-bottom: 1px solid #bbb;
 	z-index: 99999;
