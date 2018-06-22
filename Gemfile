@@ -64,3 +64,6 @@ gem 'rufo'
 gem 'carrierwave'
 gem 'devise'
 # gem 'fog-aws'
+gem 'redcarpet'
+gem 'rouge'
+

@@ -11,8 +11,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< Updated upstream
-ActiveRecord::Schema.define(version: 20180613110516) do
+ActiveRecord::Schema.define(version: 20180615025215) do
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "title",       limit: 255,   null: false
+    t.string   "sub_title",   limit: 255,   null: false
+    t.integer  "user_id",     limit: 4
+    t.string   "logo",        limit: 255,   null: false
+    t.text     "read",        limit: 65535, null: false
+    t.string   "picture",     limit: 255,   null: false
+    t.string   "description", limit: 255,   null: false
+    t.text     "content",     limit: 65535, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255,   default: "", null: false
@@ -21,22 +35,10 @@ ActiveRecord::Schema.define(version: 20180613110516) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer  "sign_in_count",          limit: 4,     default: 0,  null: false
-=======
-ActiveRecord::Schema.define(version: 20180613094718) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "email",                  limit: 255, default: "", null: false
-    t.string   "encrypted_password",     limit: 255, default: "", null: false
-    t.string   "reset_password_token",   limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          limit: 4,   default: 0,  null: false
->>>>>>> Stashed changes
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip",     limit: 255
     t.string   "last_sign_in_ip",        limit: 255
-<<<<<<< Updated upstream
     t.datetime "created_at",                                        null: false
     t.datetime "updated_at",                                        null: false
     t.string   "name",                   limit: 255
@@ -45,13 +47,10 @@ ActiveRecord::Schema.define(version: 20180613094718) do
     t.date     "foundation"
     t.text     "address",                limit: 65535
     t.text     "vision",                 limit: 65535
-=======
-    t.datetime "created_at",                                      null: false
-    t.datetime "updated_at",                                      null: false
->>>>>>> Stashed changes
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "stories", "users"
 end
