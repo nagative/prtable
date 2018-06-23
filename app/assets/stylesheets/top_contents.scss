@@ -6,32 +6,32 @@
   top: 60px;
   left: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 9999;
   background-color: #fff;
   box-shadow: 0 4px 4px 0 rgba(66,66,66,0.1);
 }
 #carousel-stories {
-height: 300px;
-margin-right: auto;
-padding: 20px 0;
-position: relative;
-box-sizing: border-box;
-    .slider-prev {
-      position: absolute;
-      top: 180px;
-      left: -380px;
-      z-index: 1;
-      font-size: 50px;
-      color: white;
-    }
-    .slider-next {
-      position: absolute;
-      top: 180px;
-      right: -430px;
-      z-index: 1;
-      font-size: 50px;
-      color: white;
-    }
+  height: 300px;
+  margin-right: auto;
+  padding: 20px 0;
+  position: relative;
+  box-sizing: border-box;
+  .slider-prev {
+    position: absolute;
+    top: 180px;
+    left: -380px;
+    z-index: 1;
+    font-size: 50px;
+    color: white;
+  }
+  .slider-next {
+    position: absolute;
+    top: 180px;
+    right: -430px;
+    z-index: 1;
+    font-size: 50px;
+    color: white;
+  }
   .slider {
     width: 90%;
     margin: 0 auto 10px;
