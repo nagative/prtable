@@ -31,6 +31,14 @@
       .story-info {
         padding-top: 10px;
         float: right;
+        width: 65%;
+        .strong {
+          word-break: break-word;
+          text-align: left;
+        }
+        .company-name {
+          padding-top: 10px;
+        }
       }
   }
   .side-tags {
