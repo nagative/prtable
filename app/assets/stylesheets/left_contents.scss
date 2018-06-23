@@ -16,23 +16,14 @@
     #pickup-companies.slick {
       padding-left: 30px;
       padding-right: 30px;
-      // display: flex;
-      // flex-wrap: wrap;
-      // height: 250px;
-      .slider-container {
-        position: relative;
-        // overflow: hidden;
-        margin: 0;
-        padding: 0;
-        display: block;
+      position: relative;
+      margin: 0;
+      padding: 0;
         .slick-arrow {
           top: 60%;
           background-color: brown;
         }
         .slick-image {
-          // float: left;
-          // height: 170px;
-          // font-family: fontAwesome;
           .deco-link {
             text-decoration: none;
           }
@@ -76,7 +67,6 @@
             }
           }
         }
-      }
     }
   }
   .latest-stories-container {
@@ -113,7 +103,6 @@
             height: 100%;
             width: 100%;
             background-color: rgba(255,255,255,0);
-            // z-index: 5;
           }
           .image-link {
             border:1px solid #EBEBEB;
