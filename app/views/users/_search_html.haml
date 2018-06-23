@@ -11,7 +11,7 @@
         %li.header-menu__list
           = link_to '企業', root_path, class: 'header_link'
         %li.header-menu__list#main-trigger
-          トピック
+          = link_to 'トピック', root_path, class: 'header_link'
         %li.header-menu__list#contacts
           = link_to '資料請求/お問い合わせ', root_path, class: 'header_link'
 
@@ -40,22 +40,20 @@
         .login-button
           = link_to 'ログイン / 新規登録', new_user_session_path, class: 'login-icon'
         #search.active
-          = form_tag '', class: 'search__form' do
+          = form_tag '/users/search', class: 'search__form' do
             .search__form-wrapper
               = fa_icon 'search', class: 'search-icon',id: 'search-icon'
               = text_field_tag :keyword,'', class: 'search__form-input', placeholder: '企業やストーリーを検索', id: 'search-input'
-            .search__form-results{style: 'display:none'}
+            .search__form-results{style: 'display: none'}
               %h3.search-results
                 企業
-              %ul.results-lists
-                / - @user.each do |user|
-                %li.results-list
-                  = link_to root_path, class:'results-link' do
+              %ul#results-lists
+                - @users.each do |user|
+                %li#results-list
+                  = link_to root_path class:'results-link' do
                     %figure.list-icon
-                      .img-icon
+                      .img 企業アイコン
                       %figcaption.company-icon
-                        / = user.name
-
+                        = user
               .search__form-results-submit
                 %button.results-submit ストーリーを検索
-
