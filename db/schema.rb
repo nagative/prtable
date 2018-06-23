@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180622064031) do
+ActiveRecord::Schema.define(version: 20180622123842) do
 
   create_table "contacts", force: :cascade do |t|
     t.integer  "enquiry",      limit: 4,     null: false
@@ -28,6 +28,21 @@ ActiveRecord::Schema.define(version: 20180622064031) do
   end
 
   add_index "contacts", ["company_name"], name: "index_contacts_on_company_name", using: :btree
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "title",       limit: 255,   null: false
+    t.string   "sub_title",   limit: 255,   null: false
+    t.integer  "user_id",     limit: 4
+    t.string   "logo",        limit: 255,   null: false
+    t.text     "read",        limit: 65535, null: false
+    t.string   "picture",     limit: 255,   null: false
+    t.string   "description", limit: 255,   null: false
+    t.text     "content",     limit: 65535, null: false
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id",        limit: 4
@@ -80,4 +95,5 @@ ActiveRecord::Schema.define(version: 20180622064031) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "stories", "users"
 end

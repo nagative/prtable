@@ -46,8 +46,13 @@
 |Column       |Type       |Options|
 |-------------|-----------|-------|
 |title        |string     |null: false|
-|sub-title    |string     |null: false|
+|sub_title    |string     |null: false|
 |user         |references |foreign_key: true|
+|logo         |string     |null: false|
+|read         |text       |null: false|
+|picture      |string     |null: false|
+|description  |string     |null: false|
+|content      |text       |null: false|
 
 ### Association
 - has_many   :images
