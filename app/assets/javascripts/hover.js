@@ -14,6 +14,20 @@ $(function(){
     $(this).css({ backgroundColor: '', color: ''});
   });
 
+  $('.results-list').on('mouseover', function(){
+    $(this).css({ backgroundColor: 'rgba(41, 217, 194, 1)', color: '#FFF'});
+  })
+  $('.results-list').on('mouseout', function(){
+    $(this).css({ backgroundColor: '', color: ''});
+  });
+
+  $('.results-submit').on('mouseover', function(){
+    $(this).css({ backgroundColor: 'rgba(41, 217, 194, 1)', color: '#FFF'});
+  })
+  $('.results-submit').on('mouseout', function(){
+    $(this).css({ backgroundColor: '', color: ''});
+  });
+
 // top-contents
   $('.img').on('mouseover', function(){
     $(this).stop(true).animate({ opacity: 0.3 }, 200);
