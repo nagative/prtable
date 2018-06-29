@@ -23,18 +23,21 @@
           = form_tag '', class: 'search__form' do
             .search__form-wrapper
               = fa_icon 'search', class: 'search-icon',id: 'search-icon'
-              = text_field_tag :name,'', class: 'search__form-input', placeholder: '企業やストーリーを検索', id: 'search-input'
+              = text_field_tag :keyword,'', class: 'search__form-input', placeholder: '企業やストーリーを検索', id: 'search-input', autocomplete: 'off'
             .search__form-results{style: 'display: none'}
               %h3.search-results
                 企業
-              %ul#results-lists
-                %li#results-list
-                  = link_to root_path class:'results-link' do
+              %ul.results-lists
+                / - users.each do |user|
+                %li.results-list
+                  = link_to root_path, class:'results-link' do
                     %figure.list-icon
-                      .img 企業アイコン
+                      = image_tag 'user.contact.company_logo', class: 'img-icon'
                       %figcaption.company-icon
+                        / = user.name
+
               .search__form-results-submit
-                %button.results-submit ストーリーを検索
+                = submit_tag 'ストーリーを検索', class:'results-submit'
 
       - else
         .login-button
@@ -48,14 +51,13 @@
               %h3.search-results
                 企業
               %ul.results-lists
-                - @users.each do |user|
+                / - users.each do |user|
                 %li.results-list
-                  = link_to root_path, class:'results-link'
+                  = link_to root_path, class:'results-link' do
                     %figure.list-icon
                       = image_tag 'user.contact.company_logo', class: 'img-icon'
-                      .img-icon{style: 'background-image: url(user.contact.company_logo);'}
                       %figcaption.company-icon
-                        = user.name
+                        / = user.name
 
 
               .search__form-results-submit
