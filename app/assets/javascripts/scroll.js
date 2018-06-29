@@ -6,7 +6,7 @@ topBtn.hide();
    topBtn.fadeIn();
   }else{
     topBtn.fadeOut();
-  } 
+  }
  });
 
  topBtn.click('turbolinks:load', function(){
