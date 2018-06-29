@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180625082627) do
+
+ActiveRecord::Schema.define(version: 20180626075044) do
+
 
   create_table "contacts", force: :cascade do |t|
     t.integer  "enquiry",      limit: 4,     null: false
     t.string   "company_name", limit: 255,   null: false
     t.string   "department",   limit: 255,   null: false
-    t.string   "user_name",    limit: 255,   null: false
+    t.string   "company_logo", limit: 255,   null: false
     t.string   "email",        limit: 255,   null: false
     t.integer  "tel_number",   limit: 4,     null: false
     t.text     "company_url",  limit: 65535
@@ -98,11 +100,14 @@ ActiveRecord::Schema.define(version: 20180625082627) do
     t.date     "foundation"
     t.text     "address",                limit: 65535
     t.text     "vision",                 limit: 65535
+    t.integer  "contact_id",             limit: 4
   end
 
+  add_index "users", ["contact_id"], name: "index_users_on_contact_id", using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "forms", "stories"
   add_foreign_key "stories", "users"
+  add_foreign_key "users", "contacts"
 end

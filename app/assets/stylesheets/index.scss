@@ -1,5 +1,10 @@
 @import 'variable';
 
+::selection{
+  background: rgba(41, 217, 194, 0.5);
+  text-shadow: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

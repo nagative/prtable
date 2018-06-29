@@ -16,5 +16,6 @@ class Story < ActiveRecord::Base
   def reject_forms(attributed)
     attributed['story_id'].blank?
   end
+
 end
 

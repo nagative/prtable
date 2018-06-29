@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :stories
+  belongs_to :contact
 
   with_options presence: true do
     validates :name

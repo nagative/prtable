@@ -32,13 +32,13 @@
           .header_link {
             text-decoration: none;
             font-weight: bold;
-            color: #CCC;
+            color: #666;
           }
         }
         #main-trigger {
           text-decoration: none;
           font-weight: bold;
-          color: #CCC;
+          color: #666;
         }
       }
     }
@@ -125,7 +125,6 @@
           .search__form-results {
             border-radius: 2px;
             text-align: left;
-            height: 500px;
             width: 250px;
             line-height: 1;
             position: absolute;
@@ -145,19 +144,22 @@
               border-bottom: 1px solid #EBEBEB;
             }
             ul.results-lists{
-              height: 400px;
               li.results-list {
-                height: 55px;
+                height: 58px;
                 font-size: 12px;
+                margin-bottom: 8px;
+                border-bottom: 1px solid #EBEBEB;
                 .results-link {
                   padding: 6px;
                   display: block;
                   color: #333;
                   text-decoration: none;
-                  .list-icon {
-                    // margin: 0;
+                  figure.list-icon {
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
                     .img-icon {
-                      // margin-right: .5em;
+                      margin-right: 5px;
                       background-position: center center;
                       background-repeat: no-repeat;
                       background-size: cover;
@@ -165,9 +167,12 @@
                       height: 46px;
                       border-radius: 4px;
                       overflow: hidden;
+                      float: left;
                     }
                     .company-icon {
-                      // font-weight: 600;
+                      float: left;
+                      height: 46px;
+                      line-height: 46px;
                     }
                   }
                 }
@@ -176,10 +181,10 @@
             .search__form-results-submit {
               text-align: center;
               padding: 8px;
-              button.results-submit {
+              .results-submit {
                 display: block;
                 width: 100%;
-                font-size: 10px;
+                font-size: 12px;
                 border-radius: 4px;
                 padding: 10px 0;
                 line-height: 1;
