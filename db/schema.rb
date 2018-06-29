@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180622123842) do
+ActiveRecord::Schema.define(version: 20180625082627) do
 
   create_table "contacts", force: :cascade do |t|
     t.integer  "enquiry",      limit: 4,     null: false
@@ -29,17 +29,25 @@ ActiveRecord::Schema.define(version: 20180622123842) do
 
   add_index "contacts", ["company_name"], name: "index_contacts_on_company_name", using: :btree
 
-  create_table "stories", force: :cascade do |t|
-    t.string   "title",       limit: 255,   null: false
+  create_table "forms", force: :cascade do |t|
     t.string   "sub_title",   limit: 255,   null: false
-    t.integer  "user_id",     limit: 4
-    t.string   "logo",        limit: 255,   null: false
-    t.text     "read",        limit: 65535, null: false
     t.string   "picture",     limit: 255,   null: false
     t.string   "description", limit: 255,   null: false
     t.text     "content",     limit: 65535, null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
+    t.integer  "story_id",    limit: 4
+  end
+
+  add_index "forms", ["story_id"], name: "fk_rails_3068eb9a7f", using: :btree
+
+  create_table "stories", force: :cascade do |t|
+    t.string   "title",      limit: 255,   null: false
+    t.integer  "user_id",    limit: 4
+    t.string   "logo",       limit: 255,   null: false
+    t.text     "read",       limit: 65535, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   add_index "stories", ["user_id"], name: "fk_rails_c53f5feaac", using: :btree
@@ -95,5 +103,6 @@ ActiveRecord::Schema.define(version: 20180622123842) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "forms", "stories"
   add_foreign_key "stories", "users"
 end

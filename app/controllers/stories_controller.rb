@@ -1,23 +1,28 @@
 class StoriesController < ApplicationController
+
+  def index
+
+  end
+
   def new
     @story = Story.new
+    @story.forms.build
   end
 
   def create
-    @story = @company.stories.new(story_params)
+    @story = Story.new(story_params)
+    binding.pry
     @story.save
+    #redirect_to :root
   end
 
   def story_params
     params.require(:story).permit(
       :title,
-      :sub_title,
-      :user,
+      :user_id,
       :logo,
       :read,
-      :picture,
-      :description,
-      :contnet
+      forms_attributes: [:sub_title, :picture, :description, :content, :story_id]
       )
   end
 end

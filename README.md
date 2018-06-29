@@ -46,12 +46,14 @@
 |Column       |Type       |Options|
 |-------------|-----------|-------|
 |title        |string     |null: false|
-|sub-title    |string     |null: false|
 |user         |references |foreign_key: true|
+|logo         |string     |null: false|
+|read         |text       |null: false|
 
 ### Association
 - has_many   :images
 - has_many   :tags
+- has_many   :forms
 - belongs_to :user
 
 
@@ -86,7 +88,7 @@
 |taggings_count|integer   |null: false|
 
 ### Association
--belongs_to :story
+- belongs_to :story
 
 
 ## timelines_table
@@ -100,3 +102,17 @@
 
 ### Association
 - belongs_to :user
+
+## forms_table
+|Column       |Type       |Options    |
+|-------------|-----------|-----------|
+|sub_title    |string     |null: false|
+|picture      |string     |null: false|
+|description  |string     |null: false|
+|content      |text       |null: false|
+|story        |references |foreign_key: true|
+### Association
+- belongs_to :story
+
+
+
