@@ -34,7 +34,7 @@ function appendNoUser(user) {
     }
       $.ajax({
         type: 'GET',
-        url: '/users',
+        url: '/users/',
         data: { keyword: input },
         dataType: 'json'
       })
