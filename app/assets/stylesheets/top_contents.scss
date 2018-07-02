@@ -1,3 +1,10 @@
+.slider {
+  display: none;
+}
+.slider.slick-initialized {
+  display: block;
+}
+
 .header-tags {
   display: none;
   position: absolute;
