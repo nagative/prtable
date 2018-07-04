@@ -26,13 +26,10 @@ function appendNoUser(user) {
 
   $('.search__form-input').on('keyup', function(){
     var input = $('.search__form-input').val();
-    console.log(input);
     if (!$(this).val()){
-    console.log('true');
       $('.search__form-results').hide();
     }
     else {
-    console.log('false');
       $('.search__form-results').show();
     }
       $.ajax({
