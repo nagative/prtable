@@ -14,6 +14,14 @@ $(function(){
     $(this).css({ backgroundColor: '', color: ''});
   });
 
+  $('.logout-icon').on('mouseover', function(){
+    $(this).css({ backgroundColor: 'rgba(41, 217, 194, 1)', color: '#FFF'});
+  })
+  $('.logout-icon').on('mouseout', function(){
+    $(this).css({ backgroundColor: '', color: ''});
+  });
+
+
   $('.results-list').on('mouseover', function(){
     $(this).css({ backgroundColor: 'rgba(41, 217, 194, 1)', color: '#FFF'});
   })
