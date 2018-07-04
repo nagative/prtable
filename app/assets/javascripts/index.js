@@ -6,7 +6,7 @@ function appendUser(user) {
   var html = `<li class='results-list'>
                 <a class='results-link' href='/'>
                   <figure class='list-icon'>
-                    <img src='/assets/${user.company_logo}' class='img-icon'>
+                    <img src='/${user.company_logo}' class='img-icon'>
                     </div>
                     <figcaption class='company-icon'>
                     ${user.name}
