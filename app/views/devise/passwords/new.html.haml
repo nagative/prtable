@@ -6,7 +6,7 @@
         パスワードをお忘れの方
       %p.notice
         登録されたメールアドレス宛にパスワード再設定のリンクを送付します
-      = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = form_for(resource, as: resource_name, url: new_user_password_path(resource_name), html: { method: :post }) do |f|
         = devise_error_messages!
         .field
           .field-input
