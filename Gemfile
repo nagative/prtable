@@ -5,20 +5,20 @@ gem "rails", "4.2.6"
 # Use mysql as the database for Active Record
 gem "mysql2", "0.4.10"
 # Use SCSS for stylesheets
-gem "sass-rails", "~> 4.0.2"
+gem "sass-rails", "5.0.7"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
 # Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", "~> 4.1.0"
+gem "coffee-rails", "4.2.2"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem "jquery-rails"
+gem "jquery-rails", "4.3.3"
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder", "~> 2.0"
+gem "jbuilder", "2.8.0"
 # bundle exec rake doc:rails generates the API under doc/api.
 gem "sdoc", "~> 0.4.0", group: :doc
 
@@ -43,7 +43,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem "web-console", "~> 2.0"
+  gem "web-console"
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
@@ -58,9 +58,9 @@ gem "compass-rails", "~> 2.0"
 gem "sprockets", "~> 2.12.5"
 gem "haml-rails"
 gem "erb2haml"
-gem "font-awesome-rails"
+gem "font-awesome-rails", "4.7.0.4"
 gem "rufo"
-gem "carrierwave"
-gem "devise"
-gem "acts-as-taggable-on", "~> 4.0"
+gem "carrierwave", "1.3.1"
+gem "devise", "4.6.2"
+gem "acts-as-taggable-on"
 # gem 'fog-aws'
