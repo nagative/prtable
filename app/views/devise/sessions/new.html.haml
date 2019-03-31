@@ -4,7 +4,7 @@
     %section.single-form
       %h1.login-title
         ログイン
-      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      = form_for(resource, as: resource_name, url: new_user_session_path(resource_name)) do |f|
         .field
           .field-input
             = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス'
