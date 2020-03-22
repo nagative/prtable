@@ -5,7 +5,7 @@ gem "rails", "5.2.2"
 # Use mysql as the database for Active Record
 gem "mysql2", "0.4.10"
 # Use Puma as the app server
-gem "puma", "~> 3.12.1"
+gem "puma", ">= 3.12.4"
 # Use SCSS for stylesheets
 gem "sass-rails", "~> 5.0.7"
 # Use Uglifier as compressor for JavaScript assets
@@ -33,7 +33,7 @@ gem "sdoc", "~> 0.4.0", group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'bootsnap', '>= 1.1.0', require: false
+gem "bootsnap", ">= 1.1.0", require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,7 +49,6 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem "web-console", ">= 3.3.0"
   gem "listen", ">= 3.0.5", "< 3.2"
-
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring"
@@ -67,6 +66,6 @@ gem "erb2haml"
 gem "font-awesome-rails", "~> 4.7.0.4"
 gem "rufo"
 gem "carrierwave", "~> 1.3.1"
-gem "devise", "~> 4.6.2"
+gem "devise", ">= 4.7.1"
 gem "acts-as-taggable-on", "~> 6.0.0"
 # gem 'fog-aws'
