@@ -65,7 +65,7 @@ gem "haml-rails", "~> 1.0.0"
 gem "erb2haml"
 gem "font-awesome-rails", "~> 4.7.0.4"
 gem "rufo"
-gem "carrierwave", "~> 1.3.1"
+gem "carrierwave", "~> 1.3.2"
 gem "devise", ">= 4.7.1"
 gem "acts-as-taggable-on", "~> 6.0.0"
 # gem 'fog-aws'
